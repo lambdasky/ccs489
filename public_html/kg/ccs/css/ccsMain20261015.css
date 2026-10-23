@@ -1,0 +1,1862 @@
+@charset 'utf-8';
+
+/* @import url("./expand.css"); */
+/* expand-collapse 関係はこのファイル内（下方）に */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,section,summary,time,mark,audio,video,button,input[type=submit],input[type=button]{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+	font-size: 100%;
+	height: 100%;
+	overflow: auto;
+	/*background-color: #f9f9f9;*/
+	/*background-color: #fdeff2;*/
+	background-color: white;
+	/*border: 2px solid #0000cc;*/ /* ★★★★★ */
+}
+
+body{
+	width: 100%;
+	min-height: 100%;
+	line-height: 1.4;
+	background-color: inherit;
+	/*font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;*/
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-size: 87.5%;
+	height: 100%;
+	-webkit-text-size-adjust: none;
+	/*border: 2px solid #cc0000;*/
+}
+
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+div.clearboth{clear: both;}
+
+
+/* 非表示 */
+.visVisible{visibility: visible !important;}
+.visHidden{visibility: hidden !important;}
+.visibilityCollapse{visibility: collapse !important;}
+.displayNone{display: none !important;}
+.displayBlock{display: block !important;}
+
+
+/* not used */
+.XYZ{
+	background-color: PaleVioletRed
+}
+
+
+img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+
+/* Outer Wrap */
+#outerWrap{
+	margin: 0 auto;
+	width: 98%;
+	color: dimgray;
+	background-color: #ffffff;
+	/*border: 1px solid #0000ff;*/
+}
+
+#outerWrap > div {
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* For PC */
+@media screen and (min-width: 520px){
+	#outerWrap{
+		margin: 0 auto;
+		width: 512px;
+		color: dimgray;
+		background-color: #ffffff;
+	}
+	#outerWrap > div {
+		margin: 0 auto;
+		width: 92%;
+	}
+}
+
+
+
+
+/* Form Item */
+div.formItem{
+	margin: 50px 0 40px 0;
+}
+
+
+
+/* input */
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date]{
+	size: 32;
+	width: 50%;
+	height: 28px;
+	font-size: 1.2em;
+	color: #222255;
+	vertical-align: middle;
+}
+@media(max-width:768px){
+	input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date]{
+		width: 75%;
+		vertical-align: middle;
+	}
+}
+
+div.outrInputRadio{
+	margin: 15px 5px;
+	font-size: 0.9rem;
+}
+
+.outrInputRadio.aa{
+	font-size: 1.0rem;
+}
+
+select{
+	width: 96%;
+	height: 28px;
+	border: 1px solid;
+	border-radius: 4px;	
+	font-size: 1rem;
+	color: #222255;
+	background-color: #ffffff;
+}
+
+@media (max-width: 768px){
+	select{
+		width: 80%;
+	}
+}
+
+textarea.tarea{
+	font-size: 1rem;
+	margin: 0;
+	max-width: 100%;
+	width: 30em;
+	height: 6em !important;
+	line-height: 1.5em;
+	color: #222255;
+}
+
+
+/* For the Notice to those who are about to apply */
+ul.ul01{
+	padding-left: 20px;
+}
+
+
+ul.guide{
+	margin: 30px 3% 0px 5%;
+}
+
+ul.guide li{
+	margin-bottom: 15px;
+	color: hotpink;
+}
+
+
+/* pNmae and hoh(head of household) */
+.hohName{
+	margin :0;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	/*
+	opacity: 0;
+	transition: 0.8s;
+	*/
+}
+
+input#hequalsp{
+	margin: 25px 0 20px 0;
+}
+
+input#hequalsp:checked + .hohNmae{
+	height: 0;
+}
+
+table.lfName input[type=text]{
+	width: 85%;
+	background-color: ;
+}
+
+
+
+/* hr */
+/* Application: 入園出願 */
+hr.hrMain{
+	margin: 40px 0 10px 0;
+	height: 10px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.4);
+}
+
+hr.hrAppBottom{
+	margin-bottom: 30px;
+	height: 10px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(220,20,60,0.6);
+}
+
+hr.hrAccEve{
+	margin: 0;
+	height: 10px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.4);
+}
+
+hr.hrUser{
+	margin: 0;
+	height: 4px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.4);
+	background-color: #ee9999;
+	color: #ffb6c1;
+}
+
+hr.hrChild{
+	margin: 0;
+	height: 4px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.4);
+	background-color: #00ced1;
+	color: #ffb6c1;
+}
+
+div.resvdListTitle{
+	/*margin: 40px auto 0 auto;*/
+	margin: 10px auto 0 auto;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+div.wtngListTitle{
+	margin: 40px auto 0 auto;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+div.resvdWtngList{
+	margin-left: 1em;
+}
+
+#titleUser{
+	margin: 20px auto 0 auto;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+div.user{
+	/*border: #990000 solid 2px;*/
+	margin-right: auto;
+	width: 100%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+div.outrBtnChgUser{
+	/*border: #009900 solid 2px;*/
+	width: 100%;
+	margin: 10px auto;
+}
+
+.floatLeft{
+  float: left;
+}
+
+button.change{
+	width: 10em;
+	height: 1.7em;
+	margin-right: auto;
+	float: left;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+button.toChgEmailForm{
+	color: #ffffff;
+	background-color: forestgreen;
+}
+
+button.toChgPwForm{
+	margin-top: 4px;
+	color: #ffffff;
+	background-color: #ffb6c1;
+}
+
+button.testEmail{
+	/*border: #009900 solid 1px;*/
+	width: 4em;
+	height: 1.5em;
+	margin-left: 3px;
+	padding: 2px 2px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1em;
+	color: #ffffff;
+	background-color: crimson;
+}
+
+span.chgType{
+	font-size: 0.8em;
+	color: palevioletred;
+	text-decoration: underline dotted crimson;
+}
+
+button.toModUserForm{
+	width: 10em;
+	height: 1.8em;
+	margin-left: auto;
+	float: right;
+	text-align: center;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: #dda0dd;
+}
+
+
+#titleChnResvs{
+	/*border: #000099 solid 1px;*/
+	margin: 20px 0 0 0;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+div.outeChild{
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	/*margin: 10px auto 50px auto;*/
+	margin: 10px auto 20px auto;
+}
+
+div.child{
+	margin-right: auto;
+	/*float: left;*/
+	width: 80%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+button.toModChildForm{
+	display: block;
+	width: 9.2em;
+	height: 1.8em;
+	margin-left: auto;
+	/*float: right;*/
+	text-align: center;
+	font-size: 0.86em;
+	color: #ffffff;
+	background-color: #dda0dd;
+}
+
+button.toModAaForm{
+	display: block;
+	width: 9.2em;
+	height: 1.8em;
+	margin-top: 12px;
+	margin-left: auto;
+	/*float: right;*/
+	text-align: center;
+	font-size: 0.86em;
+	color: #ffffff;
+	background-color: hotpink;
+}
+
+div.addResvForm{
+	margin-bottom: 30px;
+	width: 100%;
+	height: auto;
+}
+
+
+div.outrResv{
+	width: 100%;
+	margin: 3px auto 18px auto;
+}
+
+div.resv{
+	/*border: #00ff00 solid 2px;*/
+	width: 90%;
+	margin-right: auto;
+	float: left;
+	text-align: left;
+	font-weight: bold;
+	font-size: 0.9em;
+	/*color: #666666;*/
+}
+
+button.cfmDelResv{
+	width: 1.3em;
+	height: 2em;
+	margin-left: auto;
+	float: right;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: #db7093;
+}
+
+span.noCancellation{
+	width: 1.3em;
+	height: 2em;
+	margin-left: auto;
+	float: right;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #ff9999;
+	background-color: transparent;
+}
+
+span.colNoCancellation{
+	/* cfmDelResv と同じ色に */
+	color: #ff9999;
+}
+
+div.captionBuAddResv{
+	margin-top: 40px;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+div.outrBtnAddResv{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.btnReserve{
+	float: left;
+	margin: 7px;
+	width: 192px;/* value for basic CCS programs. */
+	height: 28px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	/* for inner contents (not used for now) */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid;
+}
+
+.innerReserve{
+	border: 1px solid red;
+}
+
+/* Background Colors, widths, heights */
+.btnReserve.wk{background-color: #4169e1;}
+.btnReserve.bc{background-color: #ec94a1;}
+.btnReserve.er{background-color: #ff8c00;}
+.btnReserve.op{background-color: #3cb371;}
+.btnReserve.be{background-color: #ff69b4;}
+.btnReserve.ce{background-color: #00ced1;}
+.btnReserve.cs{background-color: #ff8c00;}
+.btnReserve.BA{background-color: mediumblue;}
+.btnReserve.WV{background-color: crimson;}
+
+/* For "aa" and "pr", width, etc. are overwritten */
+.btnReserve.aa{
+	background-color: hotpink;
+	width: 126px;
+	height: 28px;
+	font-size: 14px;
+}
+
+.btnReserve.pr{
+	background-color: royalblue;
+	width: 276px;
+	height: 28px;
+	font-size: 12px;
+}
+
+
+div.outrAddChildInfo{
+	/*border: #00ff00 solid 2px;*/
+	width: 100%;
+	margin: 10px auto;
+}
+
+button.toAddChildForm{
+	/*border: #0000ff solid 2px;*/
+	width: 9em;
+	height: 1.8em;
+	/*margin-left: auto;
+	margin-right: 0;*/
+	float: right;
+	text-align: center;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: seagreen;
+}
+
+div.toOtherTyps{
+	margin: 1em auto 2em auto;
+}
+
+
+
+/* Admission Application */
+
+
+
+
+/* Bu */
+button.full{
+	width: 100%;
+	height: 1.8em;
+	font-size: 1.2em;
+	color: #ffffff;
+}
+
+button.full.doFetch{background-color: seagreen;}
+
+button.full.returnHome{background-color: hotpink;}
+
+button.full.grayOut{background-color: #eeeeee;}
+
+button.full.toAd{
+	height: 1.6em;
+	background-color: hotpink;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+button.full.toPr{
+	height: 1.6em;
+	background-color: royalblue;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+button.full.toCcs{
+	height: 1.6em;
+	background-color: forestgreen;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+button.full.login{background-color: seagreen;}
+
+button.full.regEmailForm{background-color: seagreen;}
+
+button.full.setSampleValues{background-color: #9999ee;}
+
+button.full.etc{background-color: #c37644;}
+
+button.sendPwResetUrl{
+	width: 13em;
+	height: 1.8em;
+	margin-left: auto;
+	/*float: right;*/
+	text-align: center;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: #fd92b5;
+}
+
+
+
+button.backward{
+	width: 3em;
+	height: 1.4em;
+	text-align: center;
+	font-size: 1.1em;
+	color: #ffffff;
+	background-color: #fa8072;
+}
+
+div.outrDelChildInfo{
+	margin: 0px;
+	width: 100%;
+}
+
+button.cfmDelChild{
+	width: 10em;
+	height: 1.5em;
+	margin-left: auto;
+	float: right;
+	text-align: center;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: #dda0dd;
+}
+
+
+/* Available Events */
+div.outrAvblEveTitle{
+	width: 100%;
+	margin: 20px auto 5px auto;
+}
+
+div.avblEvtTitle{
+	/*border: #990000 solid 2px;*/
+	margin-right: auto;
+	float: left;
+	width: 85%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: dimgray;
+}
+
+button.refreshAvblEvts{
+	/*width: 6em;*/
+	/*height: 2.5em;*/
+	margin-left: auto;
+	float: right;
+	text-align: center;
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: transparent;
+}
+
+/* Types */
+.ccs{color: forestgreen;}
+.aa{color: hotpink;}
+.pr{color: royalblue;}
+.wk{color: #4169e1;}
+.bc{color: #ec94a1;}
+.er{color: #ff8c00;}
+.op{color: #3cb371;}
+.be{color: #ff69b4;}
+.ce{color: #00ced1;}
+.cs{color: #ff8c00;}
+.BA{color: mediumblue;}
+.WV{color: crimson;}
+
+
+div.typRoot{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+/* for note (time schedule) */
+.typRoot span.note {
+	font-size: 0.8em;
+}
+
+/* Available or Not */
+div.avblEvt{
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+div.soldOut{
+	font-weight: lighter;
+	font-size: 0.9em;
+	color: #bbbbbb;
+}
+
+/* Fyear in Ava Event-List */
+div.fyear{
+	margin: 20px auto 5px auto;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+div.marginTop70{
+	margin-top: 70px;
+}
+
+/* topLogo, centerTitle */
+div.topLogo{
+	/*border: #0000ff solid 2px;*/
+	margin: 3px auto 7px auto;
+	width: 100%;
+}
+
+div.kgName{
+	/*border: #00ff00 solid 2px;*/
+	margin: 0 auto 20px auto;
+	line-height: 0.9;
+	text-align: center;
+}
+
+div.siteLogo{
+	/*border: #ff0000 solid 2px;*/
+	margin: 0 auto;
+	line-height: 1.0;
+	text-align: center;
+}
+
+button.logout{
+	display: block;
+	margin-right: 0;
+	margin-left: auto;
+	width: 6em;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #ffffff;
+	/*background-color: #fa8072;*/
+	background-color: #999999;
+}
+
+div.centerTitle{
+	/*border: #00ff00 solid 2px;*/
+	margin: 10px auto 20px auto;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+	line-height: 1.4;
+}
+
+
+/* font-weight, font-size */
+.bold{font-weight: bold;}
+.lighter{font-weight: lighter;}
+
+.font05{font-size: 0.5em !important;}
+.font06{font-size: 0.6em !important;}
+.font07{font-size: 0.7em !important;}
+.font08{font-size: 0.8em !important;}
+.font09{font-size: 0.9em !important;}
+.font10{font-size: 1.0em !important;}
+.font11{font-size: 1.1em !important;}
+.font12{font-size: 1.2em !important;}
+.font13{font-size: 1.3em !important;}
+.font14{font-size: 1.4em !important;}
+.font15{font-size: 1.5em !important;}
+.font16{font-size: 1.6em !important;}
+.font17{font-size: 1.7em !important;}
+.font18{font-size: 1.8em !important;}
+.font19{font-size: 1.9em !important;}
+.font20{font-size: 2.0em !important;}
+
+
+/* Basic elements in HTML */
+/*
+div#infoTitle{}
+*/
+
+div#othrtParts{
+	margin: 20px auto 40px auto;
+	/*border-right: #990099 solid 4px;*/
+}
+
+/*
+div#info{}
+*/
+
+div#btnLogout{
+	margin-right: 0;
+	margin-left: auto;
+	width: 7em;
+}
+
+/*
+div#phase{}
+div#report{}
+*/
+
+div#message{
+	/*border-right: #999900 solid 4px;*/
+	margin: 10px auto;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: steelblue;
+}
+
+div#guide{
+	/*border-right: #000099 solid 4px;*/
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #ee9999;
+}
+
+div#forms{
+	margin: auto;
+	width: 100%;
+	height: auto;
+	/*border-right: #009999 solid 4px;*/
+}
+
+div#main{
+	margin: auto;
+	width: 100%;
+	height: auto;
+	/*border-right: #009999 solid 4px;*/
+}
+
+/*
+div#buttons{}
+*/
+
+div#footer{
+	margin: 5px auto;
+	width: 100%;
+	height: auto;
+	/*border: #990000 solid 2px;*/
+}
+
+
+
+
+
+/* for Debug */
+div.debugInfo{
+	width: 100%;
+	height: auto;
+	/*border: 2px solid #ff0000*/
+}
+
+div.dbInfo{
+	margin-left: auto;
+	margin-right: 0;
+	width: 16em;
+	height: auto;
+	float: right;
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.8em;
+	/*color: #dcfadc;*/
+	/*border: 2px solid #0000ff;*/
+}
+
+div.curDt{
+	margin-left: 0;
+	margin-right: auto;
+	width: 50%;
+	height: auto;
+	text-align: left;
+	font-weight: bold;
+	font-size: 0.8em;
+	/*color: #dcfadc;*/
+	/*border: 2px solid #0000ff;*/
+}
+
+
+
+
+
+/* Privacy Policy */
+div.ppTopTitle{
+	/*border: #ff0000 solid 2px;*/
+	margin: 10px auto;
+	font-weight: bold;
+	/*font-size: 1.2em;*/
+	font-size: 2.2em;
+}
+
+div.ppSubTitle{
+	/*border: #0000ff solid 2px;*/
+	margin: 20px 5px 2px 5px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+div.ppStatement{
+	margin: 0 5px;
+	font-weight: normal;
+	font-size: 1.0em;
+}
+
+ul.ppUl01{
+	margin: 0 20px;
+}
+
+span.ppNote01{
+	font-size: 50%;
+	color: red;
+	vertical-align: top;
+	position: relative;
+	top: 0.1em;
+}
+
+table.ppTable01{
+	margin: 40px auto;
+	width: 92%;
+}
+
+td.ppTd01{
+	white-space: nowrap;
+	width: 25px;
+	text-align: right;
+}
+
+hr.ppHr01{
+	margin: 0;
+	height: 10px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.4);
+}
+
+
+
+
+/* expand - collapse */
+/* for both events and messages */
+
+div.expandBox{
+	width: 100%;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.8s;
+}
+
+input.expandCheck{
+	display: none;
+}
+
+.expandCheck:checked + .expandBox{
+	height: auto;
+	padding: 2px;
+	opacity: 1;
+}
+
+
+
+
+
+/* ■□■□■□■□■□■□ Choices for addResvForm. □■□■□■□■□■□ */
+/* Additional choices */
+.addlChoices{
+	margin: 0px 0px 70px auto;
+	width: 92%;
+	/*border: 1px solid blue;*/
+}
+
+/* For entDateChoice */
+.addlChoices .entDateChoice{
+	margin: auto;
+	width: 98%;
+}
+
+.addlChoices .entDateChoice .ttl{
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	padding: 2px;
+	font-size: 0.9rem;
+	/*border: 1px solid green;*/
+}
+
+.addlChoices .entDateChoice .remark{
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	padding: 2px;
+	font-size: 0.7rem;
+	color: crimson;
+	/*border: 1px solid blue;*/
+}
+
+.addlChoices .entDateChoice select{
+	width: 100%;
+}
+
+
+/* For engCourseChoice */
+.addlChoices .commutingMethod, .concurrency, .engCourseChoice {
+	margin: 30px auto 0px auto;
+	width: 100%;
+}
+
+.addlChoices .ttl{
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	padding: 2px;
+	font-size: 0.9rem;
+	/*border: 1px solid green;*/
+}
+
+.addlChoices .remark{
+	width: 95%;
+	height: auto;
+	margin: 0px auto;
+	padding: 2px;
+	font-size: 0.7rem;
+	color: crimson;
+	/*border: 1px solid blue;*/
+}
+
+.addlChoices .engCourseChoice select{
+	width: 80%
+}
+
+
+
+/* ■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□ */
+/* ■□■□■□■□■□■□ Family Members □■□■□■□■□■□■ */
+
+#famStateHeader{
+	margin: 30px auto;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+#famMembers, #famMemberForm{
+	margin-bottom: 0px;
+}
+
+#famMembersHeader{
+	margin: 50px auto 20px auto;
+	width: 98%;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+#famMembers .capFamMembers{
+	margin: 10px auto 5px auto;
+	width: 96%;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+#famMemberFormHeader{
+	margin: 50px auto 0px auto;
+	width: 98%;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+#famMemberFormHeader .msg{
+	margin: 20px auto;
+	font-size: 0.9rem;
+}
+
+
+
+
+/* ■□■□■□■□■□ fmForm □■□■□■□■□■ */
+.fmForm{
+	position: relative;
+	margin: 0px auto;
+	width: 96%;
+	/* Large padding-bottom ensures space for buttons with absolute position. */
+	padding: 10px 0px 42px 10px;
+	border: 3px solid skyblue;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.fmForm .hWrap{
+	margin: 10px auto 30px auto;
+	width: 100%;
+	height: auto;
+	/*border: 1px solid red;*/
+}
+
+.fmForm .byAge{
+	display: none;/* initial state */
+}
+
+.fmForm .hWrap > div{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px;
+	/*border: 1px solid orange;*/
+}
+
+.fmForm .ttl{
+	width: 100%;
+	height: auto;
+	margin: 1px auto;
+	padding: 2px;
+	font-size: 0.75rem;
+	color: dimgray;
+	/*border: 1px solid green;*/
+}
+
+.fmForm .fmNames{width: 42%;}
+.fmForm .fmNames input[type=text]{
+	display: inline-block;
+	width: 90%;
+	height: 22px;
+	margin-right: auto;
+	font-size: 0.9rem;
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+.fmForm .fmBirth{width: 90%;}
+.fmForm .fmBirth select{
+	display: inline-block;
+	width: 3rem;
+	height: 22px;
+	font-size: 0.85rem;
+	margin-right: auto;
+	border: 1px solid;
+	border-radius: 4px;
+}
+.fmForm .fmBirth select#fmBYear{
+	width: 4rem;
+}
+
+.fmForm .fmSex{
+	width: 10rem;
+	font-size: 0.9rem;
+}
+
+.fmForm .fmSex select{
+	width: 9rem;
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+.fmForm .fmRsWrap{
+	width: 10rem;
+	/*border: 1px solid green;*/
+}
+
+.fmForm .fmRsStrWrap{
+	width: auto;
+	/*border: 1px solid blue;*/
+}
+
+.fmForm .fmRsWrap select{
+	width: 96%;
+	height: 22px;
+	font-size: 0.9rem;
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+.fmForm .fmRsStrWrap input{
+	display: block;
+	width: 100%;
+	height: 20px;
+	font-size: 0.9rem;
+	border: 1px solid;
+}
+
+.fmForm .fmRsStrWrap #fmRsStr{
+	width: 3.2rem;
+	height: 22px;
+	text-align: center;
+	font-size: 0.9rem;
+	background-color: lightgray;
+	border-radius: 4px;
+}
+
+.fmForm .fmPhone{width: 96%;}
+.fmForm .fmPhpne input[type=text]{
+	width: 12rem;
+	height: 20px;
+	font-size: 0.9rem;
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+.fmForm #hWrapFmIniChk{
+	margin-top: 40px;
+}
+
+.fmForm div.outrChkBox{
+	margin-right: 0px;
+	font-size: 0.9rem;
+}
+
+.fmForm button.update{
+	position: absolute;
+	bottom: 8px;
+	left: 30%;
+	display: block;
+	width: 40%;
+	height: 26px;
+	background-color: skyblue;
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+.fmForm button.cancel{
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	display: block;
+	width: 3.5rem;
+	height: 26px;
+	background-color: orange;
+	font-weight: bold;
+	font-size: 0.65rem;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+.fmForm button.delete{
+	position: absolute;
+	bottom: 8px;
+	right: 8px;
+	display: block;
+	width: 2.8rem;
+	height: 26px;
+	background-color: palevioletred;
+	font-weight: bold;
+	font-size: 0.8rem;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+
+
+
+/* ■□■□■□■□■□ fmCard □■□■□■□■□■ */
+
+.fmCard{
+	position: relative;
+	margin: 0px auto 10px auto;
+	width: 90%;
+	height: auto;
+	padding: 10px;
+	line-height: 1.7;
+	border: 1px solid dimgray;
+	border-radius: 4px;
+}
+
+.fmCard > div{
+	display: inline-block;
+	height: 1.0rem;
+	padding: 3px;
+	margin-right: 15px;
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: dimgray;
+	/*border: 1px solid green;*/
+}
+
+.fmCard .lfnames span.lfnameLarge{font-size: 0.9rem;}
+
+/* The following elements have absolute positions. */
+.fmCard div.fmNumber{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	margin-right: 0px;
+	width: 1.8rem;
+	height: 12px;
+	padding: 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.8rem;
+	/*border: 1px solid blue;*/
+}
+
+.fmCard button.editCard{
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	display: block;
+	width: 2.8rem;
+	height: 23px;
+	background-color: cornflowerblue;
+	border-radius: 4px;
+	font-size: 0.72rem;
+	color: #ffffff;
+}
+
+.capAddNewMember{
+	margin: 1px auto 60px auto;
+	width: 96%;
+	font-weight: normal;
+	font-size: 0.75rem;
+	color: hotpink;
+}
+
+button#addNewFamMember{
+	display: block;
+	margin: 20px auto 0px auto;
+	width: 96%;
+	height: 28px;
+	background-color: cornflowerblue;
+	border-radius: 4px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+
+
+
+
+
+/* ■□■□■□■□■□■□■□■□■□■□■■□■□■□■□■□■□■□■□■□■ */
+/* ■□■□■□■□■□■□ Family Related □■□■□■□■□■□■ */
+
+#famRelFormHeader{
+	margin: 90px auto 20px auto;
+	width: 98%;
+	font-weight: bold;
+	font-size: 1.0rem;
+}
+
+#famRelFormHeader .msg{
+	margin: 20px auto;
+	font-size: 0.85rem;
+}
+
+#famRelHeader{
+	margin: 50px auto 20px auto;
+	width: 98%;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+
+
+
+/* ■□■□■□■□■□■□ frForm □■□■□■□■□■□■ */
+
+.frForm{
+	position: relative;
+	margin: 0px auto;
+	width: 96%;
+	/* Large padding-bottom ensures space for buttons with absolute position. */
+	padding: 12px 0px 42px 12px;
+	border: 3px solid skyblue;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.frForm .hWrap{
+	margin: 10px auto 35px auto;
+	width: 96%;
+	height: auto;
+	/*border: 1px solid red;*/
+}
+
+.frForm .hWrap > div{
+	display: block;
+	/*border: 1px solid orange;*/
+}
+
+.frForm .ttl{
+	width: 100%;
+	height: auto;
+	margin: 1px auto;
+	padding: 2px;
+	font-size: 0.9rem;
+	color: dimgray;
+	/*border: 1px solid green;*/
+}
+
+.frForm .parAddrTtl{
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start;
+	/*border: 1px solid blue;*/
+}
+
+.frForm .parAddrTtl .addrTtl{
+	font-size: 0.9rem;
+	/*border: 1px solid red;*/
+}
+
+.frForm .parAddrTtl .addrTtlMsg{
+	font-size: 0.7rem;
+	color: palevioletred;
+	/*border: 1px solid green;*/
+}
+
+.frForm .parAddr{
+	margin: 10px auto 10px 15px;
+}
+
+.frForm .parAddr .addr{
+	margin: 10px auto;
+}
+
+.frForm div.outrChkBox{
+	margin: 0px;
+	font-size: 0.9rem;
+}
+
+.frForm #wrapFrLivProFrom{
+	margin: 5px auto 0px 20px;
+	width: 90%;
+}
+
+.frForm .wrapFrLivProFrom input{
+	width: 10rem;
+	font-size: 0.75rem;
+	border: 1px solid dimgray;
+	border-radius: 4px;
+}
+
+.frForm button.update{
+	position: absolute;
+	bottom: 8px;
+	left: 30%;
+	display: block;
+	width: 40%;
+	height: 26px;
+	background-color: skyblue;
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+.frForm button.cancel{
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	display: block;
+	width: 3.5rem;
+	height: 26px;
+	background-color: orange;
+	font-weight: bold;
+	font-size: 0.65rem;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+.frForm button.delete{
+	position: absolute;
+	bottom: 8px;
+	right: 8px;
+	display: block;
+	width: 2.8rem;
+	height: 26px;
+	background-color: palevioletred;
+	font-weight: bold;
+	font-size: 0.8rem;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+
+
+
+/* ■□■□■□■□■□ frCard □■□■□■□■□■ */
+
+.capFrCard{
+	margin: 10px auto 2px px;
+	font-weight: bold;
+	font-size: 1.2rem;
+	/*border: 1px solid blue;*/
+}
+
+.frCard{
+	position: relative;
+	margin: 0px auto 10px auto;
+	width: 90%;
+	height: auto;
+	padding: 10px;
+	line-height: 1.7;
+	border: 1px solid dimgray;
+	/*border-radius: 4px;*/
+}
+
+.frCard > div{
+	margin: 12px auto;
+	height: auto;
+	padding: 3px;
+	margin-right: 15px;
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: dimgray;
+	/*border: 1px solid green;*/
+}
+
+.frCard .parAddr{
+	width: 100%;
+	/*border: 1px solid red;*/
+}
+
+.frCard .addr{
+	margin: 0px auto 0px 1rem;
+	/*border: 1px solid blue;*/
+}
+
+.frCard button.editCard{
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	display: block;
+	width: 2.8rem;
+	height: 23px;
+	background-color: cornflowerblue;
+	border-radius: 4px;
+	font-size: 0.72rem;
+	color: #ffffff;
+}
+
+
+
+
+
+
+/* ■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□ */
+/* ■□■□■□■□■□■□ portrait □■□■□■□■□■□■ */
+
+/* ■□■□■□■□■□ portrait □■□■□■□■□■ */
+
+#portrait{
+	margin-bottom: 180px;/* v-space to btnReturnHome */
+}
+
+#portraitCtrlHeader{
+	margin: 90px auto 20px auto;
+	width: 98%;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+
+#buttons .msgBtnReturnHome{
+	margin: 5px auto;
+	width: 85%;
+	font-weight: bold;
+	font-size: 0.7rem;
+	/*border: 1px solid red;*/
+}
+
+
+
+
+
+
+/* ■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□ */
+/* ■□■□■□■□■□■□■□■□■□ Printing □■□■□■□■□■□■□■□■□■ */
+
+.PRT .wrFlex{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+/* ■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■ */
+/* ■□■□■□■□■□■□ Color Classes □■□■□■□■□■□■ */
+
+/*赤系 9色*/
+.lightsalmon{color: lightsalmon !important;}
+.salmon{color: salmon !important;}
+.darksalmon{color: darksalmon !important;}
+.lightcoral{color: lightcoral !important;}
+.indianred{color: indianred !important;}
+.crimson{color: crimson !important;}
+.red{color: red !important;}
+.firebrick{color: firebrick !important;}
+.darkred{color: darkred !important;}
+/*橙系 5色*/
+.orange{color: orange !important;}
+.darkorange{color: darkorange !important;}
+.coral{color: coral !important;}
+.tomato{color: tomato !important;}
+.orangered{color: orangered !important;}
+/*黄系 11色*/
+.gold{color: gold !important;}
+.yellow{color: yellow !important;}
+.lightyellow{color: lightyellow !important;}
+.lemonchiffon{color: lemonchiffon !important;}
+.lightgoldenrodyellow{color: lightgoldenrodyellow !important;}
+.papayawhip{color: papayawhip !important;}
+.moccasin{color: moccasin !important;}
+.peachpuff{color: peachpuff !important;}
+.palegoldenrod{color: palegoldenrod !important;}
+.khaki{color: khaki !important;}
+.darkkhaki{color: darkkhaki !important;}
+/*緑系 22色*/
+.greenyellow{color: greenyellow !important;}
+.chartreuse{color: chartreuse !important;}
+.lawngreen{color: lawngreen !important;}
+.lime{color: lime !important;}
+.limegreen{color: limegreen !important;}
+.palegreen{color: palegreen !important;}
+.lightgreen{color: lightgreen !important;}
+.mediumspringgreen{color: mediumspringgreen !important;}
+.springgreen{color: springgreen !important;}
+.mediumseagreen{color: mediumseagreen !important;}
+.seagreen{color: seagreen !important;}
+.forestgreen{color: forestgreen !important;}
+.green{color: green !important;}
+.darkgreen{color: darkgreen !important;}
+.yellowgreen{color: yellowgreen !important;}
+.olivedrab{color: olivedrab !important;}
+.darkolivegreen{color: darkolivegreen !important;}
+.mediumaquamarine{color: mediumaquamarine !important;}
+.darkseagreen{color: darkseagreen !important;}
+.lightseagreen{color: lightseagreen !important;}
+.darkcyan{color: darkcyan !important;}
+.teal{color: teal !important;}
+/*青系 16色*/
+.cadetblue{color: cadetblue !important;}
+.steelblue{color: steelblue !important;}
+.lightsteelblue{color: lightsteelblue !important;}
+.lightblue{color: lightblue !important;}
+.powderblue{color: powderblue !important;}
+.lightskyblue{color: lightskyblue !important;}
+.skyblue{color: skyblue !important;}
+.cornflowerblue{color: cornflowerblue !important;}
+.deepskyblue{color: deepskyblue !important;}
+.dodgerblue{color: dodgerblue !important;}
+.royalblue{color: royalblue !important;}
+.blue{color: blue !important;}
+.mediumblue{color: mediumblue !important;}
+.darkblue{color: darkblue !important;}
+.navy{color: navy !important;}
+.midnightblue{color: midnightblue !important;}
+/*シアン系 8色*/
+.aquq{color: aquq !important;}
+.cyan{color: cyan !important;}
+.lightcyan{color: lightcyan !important;}
+.paleturquoise{color: paleturquoise !important;}
+.aquamarine{color: aquamarine !important;}
+.turquoise{color: turquoise !important;}
+.mediumturquoise{color: mediumturquoise !important;}
+.darkturquoise{color: darkturquoise !important;}
+/*紫系 19色*/
+.lavender{color: lavender !important;}
+.thistle{color: thistle !important;}
+.plum{color: plum !important;}
+.orchid{color: orchid !important;}
+.violet{color: violet !important;}
+.fuchsia{color: fuchsia !important;}
+.magenta{color: magenta !important;}
+.mediumorchid{color: mediumorchid !important;}
+.darkorchid{color: darkorchid !important;}
+.darkviolet{color: darkviolet !important;}
+.blueviolet{color: blueviolet !important;}
+.darkmagenta{color: darkmagenta !important;}
+.purple{color: purple !important;}
+.mediumpurple{color: mediumpurple !important;}
+.mediumslateblue{color: mediumslateblue !important;}
+.slateblue{color: slateblue !important;}
+.darkslateblue{color: darkslateblue !important;}
+.indigo{color: indigo !important;}
+/*ピンク系 6色*/
+.pink{color: pink !important;}
+.lightpink{color: lightpink !important;}
+.hotpink{color: hotpink !important;}
+.deeppink{color: deeppink !important;}
+.palevioletred{color: palevioletred !important;}
+.mediumvioletred{color: mediumvioletred !important;}
+/*茶系 18色*/
+.cornsilk{color: cornsilk !important;}
+.blanchedalmond{color: blanchedalmond !important;}
+.bisque{color: bisque !important;}
+.navajowhite{color: navajowhite !important;}
+.wheat{color: wheat !important;}
+.burlywood{color: burlywood !important;}
+.tan{color: tan !important;}
+.rosybrown{color: rosybrown !important;}
+.sandybrown{color: sandybrown !important;}
+.goldenrod{color: goldenrod !important;}
+.darkgoldenrod{color: darkgoldenrod !important;}
+.peru{color: peru !important;}
+.chocolate{color: chocolate !important;}
+.olive{color: olive !important;}
+.saddlebrown{color: saddlebrown !important;}
+.sienna{color: sienna !important;}
+.brown{color: brown !important;}
+.maroon{color: maroon !important;}
+/*白系 17色*/
+.white{color: white !important;}
+.snow{color: snow !important;}
+.honeydew{color: honeydew !important;}
+.mintcream{color: mintcream !important;}
+.azure{color: azure !important;}
+.aliceblue{color: aliceblue !important;}
+.ghostwhite{color: ghostwhite !important;}
+.whitesmoke{color: whitesmoke !important;}
+.seashell{color: seashell !important;}
+.beige{color: beige !important;}
+.oldlace{color: oldlace !important;}
+.floralwhite{color: floralwhite !important;}
+.ivory{color: ivory !important;}
+.antiquewhite{color: antiquewhite !important;}
+.linen{color: linen !important;}
+.lavenderblush{color: lavenderblush !important;}
+.mistyrose{color: mistyrose !important;}
+/*グレー系 10色*/
+.gainsboro{color: gainsboro !important;}
+.lightgray{color: lightgray !important;}
+.silver{color: silver !important;}
+.darkgray{color: darkgray !important;}
+.dimgray{color: dimgray !important;}
+.gray{color: gray !important;}
+.lightslategray{color: lightslategray !important;}
+.slategray{color: slategray !important;}
+.darkslategray{color: darkslategray !important;}
+.black{color: black !important;}
+
+
+/*
+LightSalmon (ライトサーモン) rgb(255, 160, 122)	#ffa07a
+Salmon (サーモン) rgb(250, 128, 114)	#fa8072
+DarkSalmon (ダークサーモン) rgb(233, 150, 122)	#e9967a
+LightCoral (ライトコーラル) rgb(240, 128, 128)	#f08080
+IndianRed (インディアンレッド) rgb(205, 92, 92)	#cd5c5c
+Crimson (クリムゾン) rgb(220, 20, 60)	#dc143c
+Red (レッド) rgb(255, 0, 0)	#ff0000
+FireBrick (ファイアブリック) rgb(178, 34, 34)	#b22222
+DarkRed (ダークレッド) rgb(139, 0, 0)	#8b0000
+橙系 5色
+Orange (オレンジ) rgb(255, 165, 0)	#ffa500
+DarkOrange (ダークオレンジ) rgb(255, 140, 0)	#ff8c00
+Coral (コーラル) rgb(255, 127, 80)	#ff7f50
+Tomato (トマト) rgb(255, 99, 71)	#ff6347
+OrangeRed (オレンジレッド) rgb(255, 69, 0)	#ff4500
+黄系 11色
+Gold (ゴールド) rgb(255, 215, 0)	#ffd700
+Yellow (イエロー) rgb(255, 255, 0)	#ffff00
+LightYellow (ライトイエロー) rgb(255, 255, 224)	#ffffe0
+LemonChiffon (レモンシフォン) rgb(255, 250, 205)	#fffacd
+LightGoldenRodYellow (ライトゴールデンロッドイエロー) rgb(250, 250, 210)	#fafad2
+PapayaWhip (パパヤホィップ) rgb(255, 239, 213)	#ffefd5
+Moccasin (モカシン) rgb(255, 228, 181)	#ffe4b5
+PeachPuff (ピーチパフ) rgb(255, 218, 185)	#ffdab9
+PaleGoldenRod (ペイルゴールデンロッド) rgb(238, 232, 170)	#eee8aa
+Khaki (カーキ) rgb(240, 230, 140)	#f0e68c
+DarkKhaki (ダークカーキ) rgb(189, 183, 107)	#bdb76b
+緑系 22色
+GreenYellow (グリーンイエロー) rgb(173, 255, 47)	#adff2f
+Chartreuse (シャルトリューズ) rgb(127, 255, 0)	#7fff00
+LawnGreen (ローングリーン) rgb(124, 252, 0)	#7cfc00
+Lime (ライム) rgb(0, 255, 0)	#00ff00
+LimeGreen (ライムグリーン) rgb(50, 205, 50)	#32cd32
+PaleGreen (ペイルグリーン) rgb(152,251,152)	#98fb98
+LightGreen (ライトグリーン) rgb(144, 238, 144)	#90ee90
+MediumSpringGreen (ミディアムスプリンググリーン) rgb(0, 250, 154)	#00fa9a
+SpringGreen (スプリンググリーン) rgb(0, 255, 127)	#00ff7f
+MediumSeaGreen (ミディアムシーグリーン) rgb(60, 179, 113)	#3cb371
+SeaGreen (シーグリーン) rgb(46,139, 87)	#2e8b57
+ForestGreen (フォレストグリーン) rgb(34, 139, 34)	#228b22
+Green (グリーン) rgb(0, 128, 0)	#008000
+DarkGreen (ダークグリーン) rgb(0, 100, 0)	#006400
+YellowGreen (イエローグリーン) rgb(154, 205, 50)	#9acd32
+OliveDrab (オリーブドラブ) rgb(107, 142, 35)	#6b8e23
+DarkOliveGreen (ダークオリーブグリーン) rgb(85, 107, 47)	#556b2f
+MediumAquaMarine (ミディアムアクアマリン) rgb(102, 205, 170)	#66cdaa
+DarkSeaGreen (ダークシーグリーン) rgb(143, 188, 143)	#8fbc8f
+LightSeaGreen (ライトシーグリーン) rgb(32, 178, 170)	#20b2aa
+DarkCyan (ダークシアン) rgb(0, 139, 139)	#008b8b
+Teal (ティール) rgb(0, 128, 128)	#008080
+青系 16色
+CadetBlue (カデットブルー) rgb(95, 158, 160)	#5f9ea0
+SteelBlue (スティールブルー) rgb(70, 130, 180)	#4682b4
+LightSteelBlue (ライトスティールブルー) rgb(176, 196, 222)	#b0c4de
+LightBlue (ライトブルー) rgb(173, 216, 230)	#add8e6
+PowderBlue (パウダーブルー) rgb(176, 224, 230)	#b0e0e6
+LightSkyBlue (ライトスカイブルー) rgb(135, 206, 250)	#87cefa
+SkyBlue (スカイブルー) rgb(135, 206, 235)	#87ceeb
+CornflowerBlue (コーンフラワーブルー) rgb(100, 149, 237)	#6495ed
+DeepSkyBlue (ディープスカイブルー) rgb(0, 191, 255)	#00bfff
+DodgerBlue (ドジャーブルー) rgb(30, 144, 255)	#1e90ff
+RoyalBlue (ロイヤルブルー) rgb(65, 105, 225)	#4169e1
+Blue (ブルー) rgb(0, 0, 255)	#0000ff
+MediumBlue (ミディアムブルー) rgb(0, 0, 205)	#0000cd
+DarkBlue (ダークブルー) rgb(0, 0, 139)	#00008b
+Navy (ネイビー) rgb(0, 0, 128)	#000080
+MidnightBlue (ミッドナイトブルー) rgb(25, 25, 112)	#191970
+シアン系 8色
+Aquq (アクア) *シアンと同色 rgb(0, 255, 255)	#00ffff
+Cyan (シアン) *アクアと同色 rgb(0, 255, 255)	#00ffff
+LightCyan (ライトシアン) rgb(224, 255, 255)	#e0ffff
+PaleTurquoise (ペイルターコイズ) rgb(175, 238, 238)	#afeeee
+Aquamarine (アクアマリン) rgb(127, 255, 212)	#7fffd4
+Turquoise (ターコイズ) rgb(64, 224, 208)	#40e0d0
+MediumTurquoise (ミディアムターコイズ) rgb(72, 209, 204)	#48d1cc
+DarkTurquoise (ダークターコイズ) rgb(0, 206, 209)	#00ced1
+紫系 19色
+Lavender (ラベンダー) rgb(230, 230, 250)	#e6e6fa
+Thistle (シスル) rgb(216, 191, 216)	#d8bfd8
+Plum (プラム) rgb(221, 160, 221)	#dda0dd
+Orchid (オーキッド) rgb(218, 112, 214)	#da70d6
+Violet (バイオレット) rgb(238, 130, 238)	#ee82ee
+Fuchsia (フューシャ) *マジェンタと同色 rgb(255, 0, 255)	#ff00ff
+Magenta (マジェンタ) *フューシャと同色 rgb(255, 0, 255)	#ff00ff
+MediumOrchid (ミディアムオーキッド) rgb(186, 85, 211)	#ba55d3
+DarkOrchid (ダークオーキッド) rgb(153, 50, 204)	#9932cc
+DarkViolet (ダークバイオレット) rgb(148, 0, 211)	#9400d3
+BlueViolet (ブルーバイオレット) rgb(138, 43, 226)	#8a2be2
+DarkMagenta (ダークマジェンタ) rgb(139, 0, 139)	#8b008b
+Purple (パープル) rgb(128, 0, 128)	#800080
+MediumPurple (ミディアムパープル) rgb(147, 112, 219)	#9370db
+MediumSlateBlue (ミディアムスレートブルー) rgb(123, 104, 238)	#7b68ee
+SlateBlue (スレートブルー) rgb(106, 90, 205)	#6a5acd
+DarkSlateBlue (ダークスレートブルー) rgb(72, 61, 139)	#483d8b
+Indigo (インディゴ) rgb(75, 0, 130)	#4b0082
+ピンク系 6色
+Pink (ピンク) rgb(255, 192, 203)	#ffc0cb
+LightPink (ライトピンク) rgb(255, 182, 193)	#ffb6c1
+HotPink (ホットピンク) rgb(255, 105, 180)	#ff69b4
+DeepPink (ディープピンク) rgb(255, 20, 147)	#ff1493
+PaleVioletRed (ペイルバイオレットレッド) rgb(219, 112, 147)	#db7093
+MediumVioletRed (ミディアムバイオレットレッド) rgb(199, 21, 133)	#c71585
+茶系 18色
+Cornsilk (コーンシルク) rgb(255, 248, 220)	#fff8dc
+BlanchedAlmond (ブランチドアーモンド) rgb(255, 235, 205)	#ffebcd
+Bisque (ビスク) rgb(255, 228, 196)	#ffe4c4
+NavajoWhite (ナバホホワイト) rgb(255, 222, 173)	#ffdead
+Wheat (ウィート) rgb(245, 222, 179)	#f5deb3
+BurlyWood (バーリーウッド) rgb(222, 184, 135)	#deb887
+Tan (タン) rgb(210, 180, 140)	#d2b48c
+RosyBrown (ロージーブラウン) rgb(188, 143, 143)	#bc8f8f
+SandyBrown (サンディブラウン) rgb(244, 164, 96)	#f4a460
+GoldenRod (ゴールデンロッド) rgb(218, 165, 32)	#daa520
+DarkGoldenRod (ダークゴールデンロッド) rgb(184, 134, 11)	#b8860b
+Peru (ペルー) rgb(205, 133, 63)	#cd853f
+Chocolate (チョコレート) rgb(210, 105, 30)	#d2691e
+Olive (オリーブ) rgb(128, 128, 0)	#808000
+SaddleBrown (サドルブラウン) rgb(139, 69, 19)	#8b4513
+Sienna (シエナ) rgb(160, 82, 45)	#a0522d
+Brown (ブラウン) rgb(165, 42, 42)	#a52a2a
+Maroon (マルーン) rgb(128, 0, 0)	#800000
+白系 17色
+White (ホワイト) rgb(255, 255, 255)	#ffffff
+Snow (スノウ) rgb(255, 250, 250)	#fffafa
+HoneyDew (ハニーデュー) rgb(240, 255, 240)	#f0fff0
+MintCream (ミントクリーム) rgb(245, 255, 250)	#f5fffa
+Azure (アジュール) rgb(240, 255, 255)	#f0ffff
+AliceBlue (アリスブルー) rgb(240, 248, 255)	#f0f8ff
+GhostWhite (ゴーストホワイト) rgb(248, 248, 255)	#f8f8ff
+WhiteSmoke (ホワイトスモーク) rgb(245, 245, 245)	#f5f5f5
+SeaShell (シーシェル) rgb(255, 245, 238)	#fff5ee
+Beige (ベージュ) rgb(245, 245, 220)	#f5f5dc
+OldLace (オールドレース) rgb(253, 245, 230)	#fdf5e6
+FloralWhite (フローラルホワイト) rgb(255, 250, 240)	#fffaf0
+Ivory (アイボリー) rgb(255, 255, 240)	#fffff0
+AntiqueWhite (アンティークホワイト) rgb(250, 235, 215)	#faebd7
+Linen (リネン) rgb(250, 240, 230)	#faf0e6
+LavenderBlush (ラベンダーブラッシュ) rgb(255, 240, 245)	#fff0f5
+MistyRose (ミスティローズ) rgb(255, 228, 225)	#ffe4e1
+グレー系 10色
+Gainsboro (ゲインズボロ) rgb(220, 220, 220)	#dcdcdc
+LightGray (ライトグレー) rgb(211, 211, 211)	#d3d3d3
+Silver (シルバー) rgb(192, 192, 192)	#c0c0c0
+DarkGray (ダークグレー) rgb(169, 169, 169)	#a9a9a9
+DimGray (ディムグレー) rgb(105, 105, 105)	#696969
+Gray (グレー) rgb(128, 128, 128)	#808080
+LightSlateGray (ライトスレートグレー) rgb(119, 136, 153)	#778899
+SlateGray (スレートグレー) rgb(112, 128, 144)	#708090
+DarkSlateGray (ダークスレートグレー) rgb(47, 79, 79)	#2f4f4f
+Black (ブラック) rgb(0, 0, 0)	#000000
+
+*/

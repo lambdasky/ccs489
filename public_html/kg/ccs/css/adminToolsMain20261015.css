@@ -1,0 +1,879 @@
+/*
+ * AdminTools: adminToolsMain.css
+ */
+
+@charset 'utf-8';
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,section,summary,time,mark,audio,video,button,input[type=submit],input[type=button]{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	font-size: 100%;
+	height: 100%;
+	overflow: auto;
+	/*background-color: #e0f0e0;*/
+	background-color: white;
+}
+
+body {
+	margin: 0;
+	min-height: 100%;
+	line-height: 1.4;
+	background-color: inherit;
+	/*font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;*/
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-size: 0.86rem;
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hidden { visibility: hidden; }
+
+/* Root */
+div#root {
+	width: auto;
+	margin: 0 5px;
+	padding: 0;
+	/*background-color: rgb(246,250,240);*/
+	/*background-color: rgb(230,250,220);*/
+	background-color: white;
+	/*border: 1px solid #ff0000;*/
+	color: #333366;
+}
+
+#root * {box-sizing: border-box; }
+
+/* Clear floating */
+div.clearboth {
+	clear: both;
+}
+
+/* Form Items */
+div.formitem {
+	margin: 25px 0;
+}
+
+/* input */
+input[type=text], input[type=password], input[type=email], input[type=tel] {
+	size: 32;
+	width: 50%;
+	height: 28px;
+	font-size: 1rem;
+	color: #222255;
+}
+
+/* font-weight, font-size */
+.bold { font-weight: bold; }
+.lighter { font-weight: lighter; }
+
+.font05 { font-size: 0.5rem; }
+.font06 { font-size: 0.6rem; }
+.font07 { font-size: 0.7rem; }
+.font08 { font-size: 0.8rem; }
+.font09 { font-size: 0.9rem; }
+.font10 { font-size: 1.0rem; }
+.font11 { font-size: 1.1rem; }
+.font12 { font-size: 1.2rem; }
+.font13 { font-size: 1.3rem; }
+.font14 { font-size: 1.4rem; }
+.font15 { font-size: 1.5rem; }
+.font16 { font-size: 1.6rem; }
+.font17 { font-size: 1.7rem; }
+.font18 { font-size: 1.8rem; }
+.font19 { font-size: 1.9rem; }
+.font20 { font-size: 2.0rem; }
+
+/* hr */
+hr.hrEvents {
+	margin: 0 auto;
+	height: 10px;
+	border: 1px;
+	box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.4);
+}
+
+label:hover {
+	background :#cccccc;
+}
+
+/* Mainly for buttons or divs containing buttons */
+.full  {
+	width: 98%;
+	height: 1.8rem;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #ffffff;
+	border: none;
+}
+
+.submitQuery { background-color: seagreen; }
+
+.grayOut { background-color: #eeeeee; }
+
+.login { background-color: seagreen; }
+
+.prtApps {
+	position: relative;
+	margin: 12px 0 0 0;
+}
+
+.destList {
+	background-color: steelblue;
+}
+.admApps {
+	background-color: indianred;
+}
+.benfCertApps {
+	background-color: mediumvioletred;
+	margin-bottom: 24px;
+}
+
+.full .pressArea {
+	margin: 0 auto;
+	width: 50%;
+	border: 0px solid black;
+}
+
+.full .prtParam {
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 6px;
+	right: 18px;
+	font-size: 0.8rem;
+	border: 0px solid black;
+}
+
+.full input {
+	display: inline-block;
+	width: 1.6rem;
+	height: 1.0rem;
+	text-align: center;
+	font-size: 0.8em;
+	color: mediumvioletred;
+	border: none;
+}
+
+.full .toMailer { background-color: mediumaquamarine; }
+
+.full .etc { background-color: forestgreen; }
+
+.chNursButton {
+	line-height: 1.15;
+	font-weight: bold;
+	font-size: 0.8rem;
+	color: red;
+}
+
+
+
+/* Areas */
+#header {
+	/*border: #990000 solid 2px;*/
+	font-weight: bold;
+	color: darkslategray;
+	background-color: white;
+}
+
+#header div.kgName {
+	font-size: 0.9rem;
+}
+
+#header div.headerTitle {
+	font-family: 'Georgia', serif;
+	font-size: 1.5rem;
+}
+
+#header button.createPartTotal {
+	/*display: inline-block;*/
+	display: none;
+	margin: 0px;
+	border: none;
+	padding: 5px 7px;
+	width: auto;
+	height: auto;
+	font-weight: bold;
+	font-size: 0.6rem;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	border-radius: 6px;
+	background-color: #a8bf93;
+	background-image: linear-gradient(
+		to top left,
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 0, 0.2) 30%,
+		rgba(0, 0, 0, 0)
+	);
+	box-shadow:
+		inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+		inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+#loginForm {
+	margin: 30px auto;
+	/*border: #009900 solid 2px;*/
+}
+
+#main {
+	margin: 30px auto;
+	/*border: #009900 solid 2px;*/
+}
+
+#buttons {
+	margin: 0px;
+	/*border: #000099 solid 2px;*/
+}
+
+table caption button.dlCsv {
+	display: inline-block;
+	margin: 0px 15px 4px auto;/* "margin-left: auto" is needed for the right-alignment */
+	border: none;
+	padding: 8px 12px;
+	width: auto;
+	height: auto;
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	border-radius: 6px;
+	background-color: darkgray;
+	background-image: linear-gradient(
+		to top left,
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 0, 0.2) 30%,
+		rgba(0, 0, 0, 0)
+	);
+	box-shadow:
+		inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+		inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* borders of tables and cells */
+table, td, th {
+	border-collapse: collapse;
+	border: 1px solid #333333;
+	vertical-align: middle;
+}
+
+/* table for rsvs */
+div.tblResvs {
+	margin: 0px;
+	width: 98%;
+}
+
+.tblResvs td {
+	padding: 3px;
+	/*white-space: nowrap;*/
+}
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+td.wsPreLine { white-space: pre-line; }
+td.wsPreWrap { white-space: pre-wrap; }
+
+td.wdLtd10rem {
+	max-width: 10rem;
+	white-space: normal;
+}
+
+td.wdLtd2rem {
+	max-width: 2rem;
+	white-space: normal;
+}
+
+td.partEnt {
+	white-space: nowrap;
+}
+
+/* Background colors for watings */
+td.wtng {
+	background-color: #ff9ce7;
+}
+
+td.resv {
+	background-color: #ffffff;
+}
+
+
+/* div in td for 'question' or 'comment' */
+td.comment {
+	text-align: left;
+	width: auto;
+}
+div.comment {
+	text-align: left;
+	width: auto;
+}
+
+tfoot td {
+	height: 24px;
+	background-color: forestgreen;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.0rem;
+	color: #ffffff;
+}
+
+td.noborder {
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+/* expand - collapse */
+/* for both events and messages */
+div.expandBox {
+	width: 100%;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.8s;
+}
+
+input.expandCheck {
+	display: none;
+}
+
+.expandCheck:checked + .expandBox {
+	height: auto;
+	padding: 2px;
+	opacity: 1;
+}
+
+
+/*** Objects ***/
+
+#main label {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+/* each type */
+.type {
+	margin-bottom: 50px;
+}
+
+
+/* Colors for typs */
+.aa { color: crimson; }
+.pr { color: seagreen; }
+
+/* `aa` and `pr` has different colors on the application UI. */
+/*.aa { color: hotpink;}*/
+/*.pr { color: royalblue;}*/
+
+.wk { color: #4169e1; }
+.bc { color: #ec94a1; }
+.er { color: #ff8c00; }
+.op { color: #3cb371; }
+.be { color: #ff69b4; }
+.ce { color: #00ced1; }
+.cs { color: #ff8c00; }
+.BA { color: mediumblue; }
+.WV { color: crimson; }
+
+/* typFYear */
+.typFYear > label {
+	display: block;
+	margin: 1.5px 0;
+	padding: 11px 12px;
+	font-weight: bold;
+	color: #2f8fcf;
+	background: lightgray;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+
+.typFYear > label[class^="aa"] { color: #ffffff; background: crimson; }
+.typFYear > label[class^="pr"] { color: #ffffff; background: forestgreen; }
+.typFYear > label[class^="wk"] { color: #3058d0; background: #749cff; }
+.typFYear > label[class^="bc"] { color: #db8390; background: #ffc7d4; }
+.typFYear > label[class^="er"] { color: #ee9b00; background: #ffbf33; }
+.typFYear > label[class^="op"] { color: #2ba260; background: #6fe6a4; }
+.typFYear > label[class^="be"] { color: #ee58a3; background: #ff9ce7; }
+.typFYear > label[class^="ce"] { color: #00bdc0; background: #33fff4; }
+.typFYear > label[class^="cs"] { color: #ffffff; background: #ff9d33; }
+
+
+/* events */
+div.event {
+	width: 100%;
+	margin: auto;
+}
+
+.event > label .eidEtitleSold {
+	margin: 5px auto;
+	width: 96%;
+	padding: 8px;
+}
+
+.event > label[class^="aa"] .colBg { color: crimson; background: #ffeeee; }
+.event > label[class^="pr"] .colBg { color: seagreen; background: #eeffee; }
+.event > label[class^="wk"] .colBg { color: #4169e1; background: #eeeeff; }
+.event > label[class^="bc"] .colBg { color: #ec94a1; background: #ffeeff; }
+.event > label[class^="er"] .colBg { color: #ff8c00; background: #ffffee; }
+.event > label[class^="op"] .colBg { color: #3cb371; background: #eeffee; }
+.event > label[class^="be"] .colBg { color: #ff69b4; background: #ffddee; }
+.event > label[class^="ce"] .colBg { color: #00ced1; background: #ddffff; }
+.event > label[class^="cs"] .colBg { color: #dd6a00; background: #ffffdd; }
+
+
+/* For reservation tables, buttons */
+.event .expandBox {
+	margin: 0px 12px;
+}
+
+
+/* message */
+div.messageArea{}
+
+/* messageForm */
+div.messageForm {
+	margin: 30px auto 0 0;
+	width: 720px;
+	height: auto;
+	background-color: rgb(246,250,240);
+	border: 0px solid #ff0000;
+}
+
+.messageForm label {
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 720px;
+	height: 24px;
+	padding: 11px 12px;
+	color: midnightblue;
+	font-weight: bold;
+	background-color: orange;
+	cursor: pointer;
+	transition: all 0.5s;
+	/*border: solid 1px red;*/
+}
+
+.messageForm label div.deleteMessage {
+	position: absolute;
+	top: 10px;
+	left: 760px;
+	width: 20px;
+	height: 20px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	opacity: 0.7;
+	background-color: orange;
+	font-weight: bold;
+	font-size: 18px;
+	/*border: solid 1px blue;*/
+}
+
+.expandBox table {
+	width: 100%;
+}
+
+.messageForm td.fieldKey {
+	width: 9%;
+	padding-top: 8px;
+	padding-left: 5px;
+	vertical-align: top;
+}
+
+.messageForm td.fieldValue {
+	vertical-align: bottom;
+	width: 91%;
+}
+
+.msgValue textarea {
+	width: 98%;
+	/*border: none;
+	height: 1.5rem;*/
+}
+
+.priority {
+	background-color: #ffd0dd;
+}
+
+.flexWrapFsSb {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.event .parImg {
+	margin: 0px;
+	width: 120px;
+}
+
+.event .parImg .thumbPortrait {
+	margin: 0px;
+	width: 120px;
+}
+
+
+
+/* Destinations (emails and names) to send messages */
+.dest {
+	margin-bottom: 80px;
+	font-weight: medium;
+	font-size: 1.1rem;
+}
+
+.dest table {
+	margin: 0px auto;
+	width: 80%;
+}
+
+.dest table th {
+	border: 1px soid dimgray;
+	padding: 6px;
+	text-align: center;
+}
+
+.dest table td {
+	border: 1px soid dimgray;
+	padding: 16px;
+	white-space: nowrap;
+}
+
+.dest table col.rowTitle {
+	width: 6%;
+}
+
+.dest table col.email {
+	width: 30%;
+}
+
+.dest table col.emailName {
+	width: 30%;
+}
+
+.dest table td.rowTitle {
+	vertical-align: middle;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+
+
+
+/* color classes */
+/*赤系 9色*/
+.lightsalmon { color: lightsalmon !important; }
+.salmon { color: salmon !important; }
+.darksalmon { color: darksalmon !important; }
+.lightcoral { color: lightcoral !important; }
+.indianred { color: indianred !important; }
+.crimson { color: crimson !important; }
+.red { color: red !important; }
+.firebrick { color: firebrick !important; }
+.darkred { color: darkred !important; }
+/*橙系 5色*/
+.orange { color: orange !important; }
+.darkorange { color: darkorange !important; }
+.coral { color: coral !important; }
+.tomato { color: tomato !important; }
+.orangered { color: orangered !important; }
+/*黄系 11色*/
+.gold { color: gold !important; }
+.yellow { color: yellow !important; }
+.lightyellow { color: lightyellow !important; }
+.lemonchiffon { color: lemonchiffon !important; }
+.lightgoldenrodyellow { color: lightgoldenrodyellow !important; }
+.papayawhip { color: papayawhip !important; }
+.moccasin { color: moccasin !important; }
+.peachpuff { color: peachpuff !important; }
+.palegoldenrod { color: palegoldenrod !important; }
+.khaki { color: khaki !important; }
+.darkkhaki { color: darkkhaki !important; }
+/*緑系 22色*/
+.greenyellow { color: greenyellow !important; }
+.chartreuse { color: chartreuse !important; }
+.lawngreen { color: lawngreen !important; }
+.lime { color: lime !important; }
+.limegreen { color: limegreen !important; }
+.palegreen { color: palegreen !important; }
+.lightgreen { color: lightgreen !important; }
+.mediumspringgreen { color: mediumspringgreen !important; }
+.springgreen { color: springgreen !important; }
+.mediumseagreen { color: mediumseagreen !important; }
+.seagreen { color: seagreen !important; }
+.forestgreen { color: forestgreen !important; }
+.green { color: green !important; }
+.darkgreen { color: darkgreen !important; }
+.yellowgreen { color: yellowgreen !important; }
+.olivedrab { color: olivedrab !important; }
+.darkolivegreen { color: darkolivegreen !important; }
+.mediumaquamarine { color: mediumaquamarine !important; }
+.darkseagreen { color: darkseagreen !important; }
+.lightseagreen { color: lightseagreen !important; }
+.darkcyan { color: darkcyan !important; }
+.teal { color: teal !important; }
+/*青系 16色*/
+.cadetblue { color: cadetblue !important; }
+.steelblue { color: steelblue !important; }
+.lightsteelblue { color: lightsteelblue !important; }
+.lightblue { color: lightblue !important; }
+.powderblue { color: powderblue !important; }
+.lightskyblue { color: lightskyblue !important; }
+.skyblue { color: skyblue !important; }
+.cornflowerblue { color: cornflowerblue !important; }
+.deepskyblue { color: deepskyblue !important; }
+.dodgerblue { color: dodgerblue !important; }
+.royalblue { color: royalblue !important; }
+.blue { color: blue !important; }
+.mediumblue { color: mediumblue !important; }
+.darkblue { color: darkblue !important; }
+.navy { color: navy !important; }
+.midnightblue { color: midnightblue !important; }
+/*シアン系 8色*/
+.aquq { color: aquq !important; }
+.cyan { color: cyan !important; }
+.lightcyan { color: lightcyan !important; }
+.paleturquoise { color: paleturquoise !important; }
+.aquamarine { color: aquamarine !important; }
+.turquoise { color: turquoise !important; }
+.mediumturquoise { color: mediumturquoise !important; }
+.darkturquoise { color: darkturquoise !important; }
+/*紫系 19色*/
+.lavender { color: lavender !important; }
+.thistle { color: thistle !important; }
+.plum { color: plum !important; }
+.orchid { color: orchid !important; }
+.violet { color: violet !important; }
+.fuchsia { color: fuchsia !important; }
+.magenta { color: magenta !important; }
+.mediumorchid { color: mediumorchid !important; }
+.darkorchid { color: darkorchid !important; }
+.darkviolet { color: darkviolet !important; }
+.blueviolet { color: blueviolet !important; }
+.darkmagenta { color: darkmagenta !important; }
+.purple { color: purple !important; }
+.mediumpurple { color: mediumpurple !important; }
+.mediumslateblue { color: mediumslateblue !important; }
+.slateblue { color: slateblue !important; }
+.darkslateblue { color: darkslateblue !important; }
+.indigo { color: indigo !important; }
+/*ピンク系 6色*/
+.pink { color: pink !important; }
+.lightpink { color: lightpink !important; }
+.hotpink { color: hotpink !important; }
+.deeppink { color: deeppink !important; }
+.palevioletred { color: palevioletred !important; }
+.mediumvioletred { color: mediumvioletred !important; }
+/*茶系 18色*/
+.cornsilk { color: cornsilk !important; }
+.blanchedalmond { color: blanchedalmond !important; }
+.bisque { color: bisque !important; }
+.navajowhite { color: navajowhite !important; }
+.wheat { color: wheat !important; }
+.burlywood { color: burlywood !important; }
+.tan { color: tan !important; }
+.rosybrown { color: rosybrown !important; }
+.sandybrown { color: sandybrown !important; }
+.goldenrod { color: goldenrod !important; }
+.darkgoldenrod { color: darkgoldenrod !important; }
+.peru { color: peru !important; }
+.chocolate { color: chocolate !important; }
+.olive { color: olive !important; }
+.saddlebrown { color: saddlebrown !important; }
+.sienna { color: sienna !important; }
+.brown { color: brown !important; }
+.maroon { color: maroon !important; }
+/*白系 17色*/
+.white { color: white !important; }
+.snow { color: snow !important; }
+.honeydew { color: honeydew !important; }
+.mintcream { color: mintcream !important; }
+.azure { color: azure !important; }
+.aliceblue { color: aliceblue !important; }
+.ghostwhite { color: ghostwhite !important; }
+.whitesmoke { color: whitesmoke !important; }
+.seashell { color: seashell !important; }
+.beige { color: beige !important; }
+.oldlace { color: oldlace !important; }
+.floralwhite { color: floralwhite !important; }
+.ivory { color: ivory !important; }
+.antiquewhite { color: antiquewhite !important; }
+.linen { color: linen !important; }
+.lavenderblush { color: lavenderblush !important; }
+.mistyrose { color: mistyrose !important; }
+/*グレー系 10色*/
+.gainsboro { color: gainsboro !important; }
+.lightgray { color: lightgray !important; }
+.silver { color: silver !important; }
+.darkgray { color: darkgray !important; }
+.dimgray { color: dimgray !important; }
+.gray { color: gray !important; }
+.lightslategray { color: lightslategray !important; }
+.slategray { color: slategray !important; }
+.darkslategray { color: darkslategray !important; }
+.black { color: black !important; }
+
+
+/*
+LightSalmon (ライトサーモン) rgb(255, 160, 122)	#ffa07a
+Salmon (サーモン) rgb(250, 128, 114)	#fa8072
+DarkSalmon (ダークサーモン) rgb(233, 150, 122)	#e9967a
+LightCoral (ライトコーラル) rgb(240, 128, 128)	#f08080
+IndianRed (インディアンレッド) rgb(205, 92, 92)	#cd5c5c
+Crimson (クリムゾン) rgb(220, 20, 60)	#dc143c
+Red (レッド) rgb(255, 0, 0)	#ff0000
+FireBrick (ファイアブリック) rgb(178, 34, 34)	#b22222
+DarkRed (ダークレッド) rgb(139, 0, 0)	#8b0000
+橙系 5色
+Orange (オレンジ) rgb(255, 165, 0)	#ffa500
+DarkOrange (ダークオレンジ) rgb(255, 140, 0)	#ff8c00
+Coral (コーラル) rgb(255, 127, 80)	#ff7f50
+Tomato (トマト) rgb(255, 99, 71)	#ff6347
+OrangeRed (オレンジレッド) rgb(255, 69, 0)	#ff4500
+黄系 11色
+Gold (ゴールド) rgb(255, 215, 0)	#ffd700
+Yellow (イエロー) rgb(255, 255, 0)	#ffff00
+LightYellow (ライトイエロー) rgb(255, 255, 224)	#ffffe0
+LemonChiffon (レモンシフォン) rgb(255, 250, 205)	#fffacd
+LightGoldenRodYellow (ライトゴールデンロッドイエロー) rgb(250, 250, 210)	#fafad2
+PapayaWhip (パパヤホィップ) rgb(255, 239, 213)	#ffefd5
+Moccasin (モカシン) rgb(255, 228, 181)	#ffe4b5
+PeachPuff (ピーチパフ) rgb(255, 218, 185)	#ffdab9
+PaleGoldenRod (ペイルゴールデンロッド) rgb(238, 232, 170)	#eee8aa
+Khaki (カーキ) rgb(240, 230, 140)	#f0e68c
+DarkKhaki (ダークカーキ) rgb(189, 183, 107)	#bdb76b
+緑系 22色
+GreenYellow (グリーンイエロー) rgb(173, 255, 47)	#adff2f
+Chartreuse (シャルトリューズ) rgb(127, 255, 0)	#7fff00
+LawnGreen (ローングリーン) rgb(124, 252, 0)	#7cfc00
+Lime (ライム) rgb(0, 255, 0)	#00ff00
+LimeGreen (ライムグリーン) rgb(50, 205, 50)	#32cd32
+PaleGreen (ペイルグリーン) rgb(152,251,152)	#98fb98
+LightGreen (ライトグリーン) rgb(144, 238, 144)	#90ee90
+MediumSpringGreen (ミディアムスプリンググリーン) rgb(0, 250, 154)	#00fa9a
+SpringGreen (スプリンググリーン) rgb(0, 255, 127)	#00ff7f
+MediumSeaGreen (ミディアムシーグリーン) rgb(60, 179, 113)	#3cb371
+SeaGreen (シーグリーン) rgb(46,139, 87)	#2e8b57
+ForestGreen (フォレストグリーン) rgb(34, 139, 34)	#228b22
+Green (グリーン) rgb(0, 128, 0)	#008000
+DarkGreen (ダークグリーン) rgb(0, 100, 0)	#006400
+YellowGreen (イエローグリーン) rgb(154, 205, 50)	#9acd32
+OliveDrab (オリーブドラブ) rgb(107, 142, 35)	#6b8e23
+DarkOliveGreen (ダークオリーブグリーン) rgb(85, 107, 47)	#556b2f
+MediumAquaMarine (ミディアムアクアマリン) rgb(102, 205, 170)	#66cdaa
+DarkSeaGreen (ダークシーグリーン) rgb(143, 188, 143)	#8fbc8f
+LightSeaGreen (ライトシーグリーン) rgb(32, 178, 170)	#20b2aa
+DarkCyan (ダークシアン) rgb(0, 139, 139)	#008b8b
+Teal (ティール) rgb(0, 128, 128)	#008080
+青系 16色
+CadetBlue (カデットブルー) rgb(95, 158, 160)	#5f9ea0
+SteelBlue (スティールブルー) rgb(70, 130, 180)	#4682b4
+LightSteelBlue (ライトスティールブルー) rgb(176, 196, 222)	#b0c4de
+LightBlue (ライトブルー) rgb(173, 216, 230)	#add8e6
+PowderBlue (パウダーブルー) rgb(176, 224, 230)	#b0e0e6
+LightSkyBlue (ライトスカイブルー) rgb(135, 206, 250)	#87cefa
+SkyBlue (スカイブルー) rgb(135, 206, 235)	#87ceeb
+CornflowerBlue (コーンフラワーブルー) rgb(100, 149, 237)	#6495ed
+DeepSkyBlue (ディープスカイブルー) rgb(0, 191, 255)	#00bfff
+DodgerBlue (ドジャーブルー) rgb(30, 144, 255)	#1e90ff
+RoyalBlue (ロイヤルブルー) rgb(65, 105, 225)	#4169e1
+Blue (ブルー) rgb(0, 0, 255)	#0000ff
+MediumBlue (ミディアムブルー) rgb(0, 0, 205)	#0000cd
+DarkBlue (ダークブルー) rgb(0, 0, 139)	#00008b
+Navy (ネイビー) rgb(0, 0, 128)	#000080
+MidnightBlue (ミッドナイトブルー) rgb(25, 25, 112)	#191970
+シアン系 8色
+Aquq (アクア) *シアンと同色 rgb(0, 255, 255)	#00ffff
+Cyan (シアン) *アクアと同色 rgb(0, 255, 255)	#00ffff
+LightCyan (ライトシアン) rgb(224, 255, 255)	#e0ffff
+PaleTurquoise (ペイルターコイズ) rgb(175, 238, 238)	#afeeee
+Aquamarine (アクアマリン) rgb(127, 255, 212)	#7fffd4
+Turquoise (ターコイズ) rgb(64, 224, 208)	#40e0d0
+MediumTurquoise (ミディアムターコイズ) rgb(72, 209, 204)	#48d1cc
+DarkTurquoise (ダークターコイズ) rgb(0, 206, 209)	#00ced1
+紫系 19色
+Lavender (ラベンダー) rgb(230, 230, 250)	#e6e6fa
+Thistle (シスル) rgb(216, 191, 216)	#d8bfd8
+Plum (プラム) rgb(221, 160, 221)	#dda0dd
+Orchid (オーキッド) rgb(218, 112, 214)	#da70d6
+Violet (バイオレット) rgb(238, 130, 238)	#ee82ee
+Fuchsia (フューシャ) *マジェンタと同色 rgb(255, 0, 255)	#ff00ff
+Magenta (マジェンタ) *フューシャと同色 rgb(255, 0, 255)	#ff00ff
+MediumOrchid (ミディアムオーキッド) rgb(186, 85, 211)	#ba55d3
+DarkOrchid (ダークオーキッド) rgb(153, 50, 204)	#9932cc
+DarkViolet (ダークバイオレット) rgb(148, 0, 211)	#9400d3
+BlueViolet (ブルーバイオレット) rgb(138, 43, 226)	#8a2be2
+DarkMagenta (ダークマジェンタ) rgb(139, 0, 139)	#8b008b
+Purple (パープル) rgb(128, 0, 128)	#800080
+MediumPurple (ミディアムパープル) rgb(147, 112, 219)	#9370db
+MediumSlateBlue (ミディアムスレートブルー) rgb(123, 104, 238)	#7b68ee
+SlateBlue (スレートブルー) rgb(106, 90, 205)	#6a5acd
+DarkSlateBlue (ダークスレートブルー) rgb(72, 61, 139)	#483d8b
+Indigo (インディゴ) rgb(75, 0, 130)	#4b0082
+ピンク系 6色
+Pink (ピンク) rgb(255, 192, 203)	#ffc0cb
+LightPink (ライトピンク) rgb(255, 182, 193)	#ffb6c1
+HotPink (ホットピンク) rgb(255, 105, 180)	#ff69b4
+DeepPink (ディープピンク) rgb(255, 20, 147)	#ff1493
+PaleVioletRed (ペイルバイオレットレッド) rgb(219, 112, 147)	#db7093
+MediumVioletRed (ミディアムバイオレットレッド) rgb(199, 21, 133)	#c71585
+茶系 18色
+Cornsilk (コーンシルク) rgb(255, 248, 220)	#fff8dc
+BlanchedAlmond (ブランチドアーモンド) rgb(255, 235, 205)	#ffebcd
+Bisque (ビスク) rgb(255, 228, 196)	#ffe4c4
+NavajoWhite (ナバホホワイト) rgb(255, 222, 173)	#ffdead
+Wheat (ウィート) rgb(245, 222, 179)	#f5deb3
+BurlyWood (バーリーウッド) rgb(222, 184, 135)	#deb887
+Tan (タン) rgb(210, 180, 140)	#d2b48c
+RosyBrown (ロージーブラウン) rgb(188, 143, 143)	#bc8f8f
+SandyBrown (サンディブラウン) rgb(244, 164, 96)	#f4a460
+GoldenRod (ゴールデンロッド) rgb(218, 165, 32)	#daa520
+DarkGoldenRod (ダークゴールデンロッド) rgb(184, 134, 11)	#b8860b
+Peru (ペルー) rgb(205, 133, 63)	#cd853f
+Chocolate (チョコレート) rgb(210, 105, 30)	#d2691e
+Olive (オリーブ) rgb(128, 128, 0)	#808000
+SaddleBrown (サドルブラウン) rgb(139, 69, 19)	#8b4513
+Sienna (シエナ) rgb(160, 82, 45)	#a0522d
+Brown (ブラウン) rgb(165, 42, 42)	#a52a2a
+Maroon (マルーン) rgb(128, 0, 0)	#800000
+白系 17色
+White (ホワイト) rgb(255, 255, 255)	#ffffff
+Snow (スノウ) rgb(255, 250, 250)	#fffafa
+HoneyDew (ハニーデュー) rgb(240, 255, 240)	#f0fff0
+MintCream (ミントクリーム) rgb(245, 255, 250)	#f5fffa
+Azure (アジュール) rgb(240, 255, 255)	#f0ffff
+AliceBlue (アリスブルー) rgb(240, 248, 255)	#f0f8ff
+GhostWhite (ゴーストホワイト) rgb(248, 248, 255)	#f8f8ff
+WhiteSmoke (ホワイトスモーク) rgb(245, 245, 245)	#f5f5f5
+SeaShell (シーシェル) rgb(255, 245, 238)	#fff5ee
+Beige (ベージュ) rgb(245, 245, 220)	#f5f5dc
+OldLace (オールドレース) rgb(253, 245, 230)	#fdf5e6
+FloralWhite (フローラルホワイト) rgb(255, 250, 240)	#fffaf0
+Ivory (アイボリー) rgb(255, 255, 240)	#fffff0
+AntiqueWhite (アンティークホワイト) rgb(250, 235, 215)	#faebd7
+Linen (リネン) rgb(250, 240, 230)	#faf0e6
+LavenderBlush (ラベンダーブラッシュ) rgb(255, 240, 245)	#fff0f5
+MistyRose (ミスティローズ) rgb(255, 228, 225)	#ffe4e1
+グレー系 10色
+Gainsboro (ゲインズボロ) rgb(220, 220, 220)	#dcdcdc
+LightGray (ライトグレー) rgb(211, 211, 211)	#d3d3d3
+Silver (シルバー) rgb(192, 192, 192)	#c0c0c0
+DarkGray (ダークグレー) rgb(169, 169, 169)	#a9a9a9
+DimGray (ディムグレー) rgb(105, 105, 105)	#696969
+Gray (グレー) rgb(128, 128, 128)	#808080
+LightSlateGray (ライトスレートグレー) rgb(119, 136, 153)	#778899
+SlateGray (スレートグレー) rgb(112, 128, 144)	#708090
+DarkSlateGray (ダークスレートグレー) rgb(47, 79, 79)	#2f4f4f
+Black (ブラック) rgb(0, 0, 0)	#000000
+
+*/
